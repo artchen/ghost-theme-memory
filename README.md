@@ -1,19 +1,17 @@
 # Ghost Theme Typescript
 
-**Typescript** is a minimal theme for [Ghost](http://ghost.org). I am working on a [Hexo](https://hexo.io/) version, too.
-
-**Typescript**是一套极简主题，适用于[Ghost](http://ghost.org)。我正在制作适用[Hexo](https://hexo.io/)的版本。
+Typescript is a minimal theme for [Ghost](http://ghost.org). I am working on a [Hexo](https://hexo.io/) version, too.
 
 ## Production
 
-If you are going to use **Typescript** directly (without much customization).
+If you are going to use Typescript directly (without much customization).
 
 ```
 cd <path-to-ghost-folder>/content/themes/
 git clone https://github.com/artchen/ghost-theme-typescript.git typescript
 ```
 
-This is the version of **Typescript** used on [otakism.org](http://otakism.org), my blog. There are quite a few things hard-coded into the template that you'll need to customize. Including:
+This is the version of Typescript used on [otakism.org](http://otakism.org), my blog. There are quite a few things hard-coded into the template that you'll need to customize. Including:
 
 * The site logo: `assets/img/logo.png`
 * The short text under the logo: `partials/header.hbs`
@@ -27,7 +25,7 @@ The fonts are from [Typekit](https://typekit.com/). If you are not using typekit
 
 ## Development
 
-If you are going to develop your own features/styles/etc upon **Typescript**, here is how to set up the development environment.
+If you are going to develop your own features/styles/etc upon Typescript, here is how to set up the development environment.
 
 Clone the repository.
 
