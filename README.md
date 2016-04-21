@@ -16,11 +16,11 @@ This is the version of Typescript used on [otakism.org](http://otakism.org), my 
 * The site logo: `assets/img/logo.png`
 * The short text under the logo: `partials/header.hbs`
 * Disqus integration: `page.hbs`, `post.hbs`
-* Social account links: `footer.hbs`
+* Social account links: `partials/footer.hbs`
 
 The search feature uses [swiftype](https://swiftype.com/). Please follow their instruction to setup your own searches.
 
-The fonts are from [Typekit](https://typekit.com/). If you are not using typekit, please remove corresponding code is in `header.hbs`.
+The fonts are from [Typekit](https://typekit.com/). If you are not using typekit, please remove corresponding code is in `default.hbs`.
 
 
 ## Development
