@@ -36,12 +36,13 @@ git clone https://github.com/artchen/ghost-theme-typescript.git typescript
 
 Install [gulp](http://gulpjs.com/), [bower](http://bower.io/) and [npm](https://www.npmjs.com/) before proceed.
 
-Install the app:
+Install and build the app:
 
 ```
 cd ./typescript
 npm install
 bower install
+gulp
 ```
 
 At this point your development environment is ready.
