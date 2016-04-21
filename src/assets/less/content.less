@@ -1,0 +1,244 @@
+.content {
+	color: lighten(@black, 2%);
+  font-size: 14px;
+  line-height: 1.75em;
+  padding: 0px 30px;
+  
+  @media (max-width: @on-phone) {
+    padding: 0px 20px;
+  }
+	img {
+		position: relative;
+		display: block;
+		width: 114%;
+		margin: 0 -7%;
+		box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.15);
+		padding: 5px;
+		background: white;
+		transition: all 0.24s ease;
+		
+		@media (max-width: @on-phone)  {
+			width: 100%;
+			margin: 0;
+			box-shadow: none;
+		}
+	}
+	p.small-img,
+	div.small-img {
+		img {
+			width: auto;
+			max-width: 100%;
+			margin: 0;
+			box-shadow: none;
+		}
+	}
+	p {
+		margin: 20px 0px;
+	}
+	ul,
+	ol {
+		list-style: circle;
+		margin: 20px 0px;
+		padding-left: 30px;
+	}
+	a {
+    color: darken(@accent-color, 2%);
+
+    &:hover {
+      color: darken(@accent-color, 3%);
+      background: fade(@accent-color, 10%);
+    }
+    &:active {
+      background: fade(@accent-color, 20%);
+      color: @white;
+    }
+  }
+  h1, h2, h3, h4, h5, h6 {
+	  position: relative;
+    font-family: @base-font-family;
+    font-weight: bold;
+    margin: 40px auto 30px auto;
+    left: 20px;
+ 
+    &::before {
+	    position: absolute;
+	    left: -20px;
+	    top: 0px;
+	    content: "#";
+	    color: @material-green;
+	    font-weight: normal;
+    }
+  }
+  blockquote {
+    position: relative;
+    width: 100%;
+    margin: 20px 0px;
+    padding: 0px 20px;
+    border-left: 4px solid @material-green;
+  }
+	pre {
+		display: block;
+		-moz-box-sizing: border-box;
+    box-sizing: border-box;
+		font-family: @code-font-family;
+	  width: 100%;
+    font-size: 13px;
+    margin: 20px 0px;
+    padding: 10px 15px;
+    background: @background-color;
+    white-space: pre;
+    overflow: auto;
+    
+	  code {
+			color: @black;
+			margin: 0;
+			font-size: 1em;
+			background: transparent;
+			border: 0;
+			white-space: inherit;
+		}
+		figure {
+			margin: 0px;
+		}
+  }
+  code {
+	  font-family: @code-font-family;
+	  color: darken(@brand-color, 2%);
+    padding: 3px 5px;
+    margin: 0px 2px;
+    border-radius: 2px;
+    white-space: nowrap;
+    font-size: 0.8em;
+    background: @background-color;
+  }
+  .tags {
+	  margin-top: 50px;
+	  
+		a {
+			position: relative;
+			padding: 4px 10px 4px 20px;
+			margin-right: 5px;
+			font-size: 14px;
+			background: @background-color;
+			border-radius: 2px;
+			vertical-align: middle;
+			line-height: 1.75em;
+			color: @black;
+			
+			&:hover {
+				background: @black;
+				color: white;
+			}
+			&::before {
+				position: absolute;
+				top: 0;
+				left: 7px;
+				content: "#";
+			}
+		}
+	}
+  @media (max-width: @on-phone)  {
+
+    h1, h2, h3 {
+      margin: 30px 0px;
+    }
+    h4, h5, h6 {
+      margin: 20px 0px;
+    }
+    h1 {
+      font-size: 1.5em;
+    }
+    h2 {
+      font-size: 1.4em;
+    }
+    h3 {
+      font-size: 1.3em;
+    }
+    h4{
+      font-size: 1.2em;
+    }
+    h5 {
+      font-size: 1.1em;
+    }
+    h6 {
+      font-size: 1em;
+    }
+    figure {
+      font-size: 13px;
+      line-height: 1.6em;
+    }
+  }
+}
+
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+  color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+  color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+  color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+  color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+  color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+  color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+  color: #8959a8;
+}
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  background: white;
+  color: #4d4d4c;
+  padding: 0.5em;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}

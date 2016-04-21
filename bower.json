@@ -1,0 +1,25 @@
+{
+  "name": "Typescript",
+  "description": "A minimal ghost theme",
+  "main": "index.js",
+  "authors": [
+    "Art Chen"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "ghost",
+    "theme"
+  ],
+  "homepage": "http://otakism.org",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.3"
+  }
+}

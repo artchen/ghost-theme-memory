@@ -1,0 +1,2 @@
+# Ghost Theme - Typescript
+

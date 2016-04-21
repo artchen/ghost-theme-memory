@@ -1,0 +1,14 @@
+<section class="post-list">
+	{{#foreach posts}}
+	<article class="post {{post_class}}">
+	  <h2 class="title"><a href="{{url}}">{{{title}}}</a></h2>
+	  <time>{{date published_at format="MMMM DD, YYYY"}}</time>
+	  <section class="content">
+		  {{content}}
+		  <div class="tags">
+			  {{tags separator=""}}
+		  </div>
+	  </section>
+	</article>
+	{{/foreach}}
+</section>

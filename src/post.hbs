@@ -1,0 +1,55 @@
+{{!< default}}
+
+{{#post}}
+
+<main id="main" role="main">
+  <article class="post single {{post_class}}">
+		<h2 class="title"><a href="{{url}}">{{{title}}}</a></h2>
+		<time>{{date published_at format="MMMM DD, YYYY"}}</time>
+		<section class="content">
+      {{content}}
+      <div class="tags">
+			  {{tags separator=""}}
+		  </div>
+		</section>
+  </article>
+  
+  <section class="post-nav clearfix">
+    {{#prev_post}}
+		<a class="left nav prev" href="{{url}}">
+			<span class="icon icon-chevron-left"></span>
+			<span class="text">Previous</span>
+		</a>
+    {{/prev_post}}
+    {{#next_post}}
+		<a class="right nav next" href="{{url}}">
+			<span class="text">Next</span>
+			<span class="icon icon-chevron-right"></span>
+		</a>
+		{{/next_post}}
+	</section>
+	
+	<section class="comments">
+		<div id="disqus_thread"></div>
+	</section>
+	
+</main>
+
+{{/post}}
+
+
+<script>
+var disqus_config = function () {
+this.page.url = "{{url absolute="true"}}"; // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = "{{id}}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '//otakismorg.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>

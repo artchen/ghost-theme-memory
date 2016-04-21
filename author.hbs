@@ -1,0 +1,23 @@
+{{!< default}}
+
+<main id="main" role="main">
+	{{#author}}
+	  <section class="post author-profile">
+	    {{#if cover}}
+		    <div class="author-cover">
+	        <div class="img" style="background-image: url({{cover}})"></div>
+		    </div>
+	    {{/if}}
+	    {{#if image}}
+		    <div class="author-avatar">
+	        <img src="{{image}}" />
+		    </div>
+	    {{/if}}
+	    <h1 class="author-title">
+		  	<a {{#if website}}href="{{website}}"{{/if}} target="_blank">{{name}}</a>
+		  </h1>
+	  </section>
+	{{/author}}
+  {{> "loop"}}
+  {{pagination}}
+</main>

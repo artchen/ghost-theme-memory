@@ -1,0 +1,14 @@
+<section class="pagination post-nav clearfix">
+  {{#if prev}}
+	<a class="left nav prev" href="{{page_url prev}}">
+		<span class="icon icon-chevron-left"></span>
+		<span class="text">Previous</span>
+	</a>
+  {{/if}}
+  {{#if next}}
+	<a class="right nav next" href="{{page_url next}}">
+		<span class="text">Next</span>
+		<span class="icon icon-chevron-right"></span>
+	</a>
+	{{/if}}
+</section>

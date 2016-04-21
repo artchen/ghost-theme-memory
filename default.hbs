@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>{{meta_title}}</title>
+  <meta name="description" content="{{meta_description}}" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="alternate" type="application/rss+xml" title="feed" href="/rss"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <link rel="shortcut icon" href="{{asset "/favicon.ico"}}">
+  <script src="https://use.typekit.net/ulr4loe.js"></script>
+	<script>try{Typekit.load({ async: false });}catch(e){}</script>
+  <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
+  {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+	
+	<div id="loading-bar-wrapper">
+	  <div id="loading-bar"></div>
+	</div>
+	
+	<script>document.getElementById("loading-bar").style.width="20%";</script>
+	<div class="site-wrapper">
+  {{> header}}
+  
+  <script>document.getElementById("loading-bar").style.width="40%";</script>
+  
+  {{{body}}}
+  <script>document.getElementById("loading-bar").style.width="60%";</script>
+  
+  {{> footer}}
+  
+	</div>
+	
+	<script>document.getElementById("loading-bar").style.width="80%";</script>
+  
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script>window.jQuery || document.write('<script src="/js/vendor.js"><\/script>')</script>
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+  <script type="text/javascript" src="{{asset "js/app.js"}}"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+    <script>document.getElementById("loading-bar").style.width="100%";</script>
+	{{ghost_foot}}
+</body>
+</html>

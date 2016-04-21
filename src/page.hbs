@@ -1,0 +1,30 @@
+{{!< default}}
+
+{{#post}}
+
+<main id="main" role="main">
+  <article class="post single {{post_class}}">
+		<h2 class="title"><a href="{{url}}">{{{title}}}</a></h2>
+		<time>{{date published_at format="MMMM DD, YYYY"}}</time>
+		<section class="content">
+      {{content}}
+		</section>
+  </article>
+	<section class="comments page">
+		<div id="disqus_thread"></div>
+	</section>
+</main>
+{{/post}}
+
+<script>
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '//otakismorg.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
