@@ -66,7 +66,7 @@ Public resources used in this theme:
 
 Copyright © Art Chen
 
-Please do not remove the "Theme Typescript designed by Hermit" text and links.
+Please do not remove the "Theme Typescript designed by Art Chen" text and links.
 
 请不要删除页面底部的作者信息和链接。
 
