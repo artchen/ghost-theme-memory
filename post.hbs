@@ -31,10 +31,10 @@
 	
 	<section class="comments">
 		<div id="disqus_thread"></div>
-		<script>
+    <script>
       (function() {
-        var your_disqus_username = ''; // replace with your disqus username
-        var disqus_username = (location.hostname === 'otakism.org') ? 'otakism-org' : your_disqus_username;
+        var custom_disqus_username = "";
+        var disqus_username = (location.hostname === 'otakism.org') ? 'otakism-org' : custom_disqus_username;
         var d = document, s = d.createElement('script');
         s.src = '//' + disqus_username + '.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
