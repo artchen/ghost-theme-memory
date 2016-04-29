@@ -22,6 +22,7 @@ The search feature uses [swiftype](https://swiftype.com/). Please follow their i
 
 The fonts are from [Typekit](https://typekit.com/). If you are not using typekit, please remove corresponding code is in `default.hbs`.
 
+**Please make sure you modified `page.hbs` and `post.hbs`. Otherwise Disqus won't work. **
 
 ## Development
 
