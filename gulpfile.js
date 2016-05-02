@@ -93,8 +93,8 @@ gulp.task('vendor', function() {
 /* misc */
 gulp.task('misc', function(){
 	// favicon
-  gulp.src('src/assets/favicon.ico')
-    .pipe(gulp.dest(path.DIST + '/assets'));
+  gulp.src('src/assets/favicon/*')
+    .pipe(gulp.dest(path.DIST + '/assets/favicon'));
   // fonts
   gulp.src('src/assets/fonts/**')
   	.pipe(gulp.dest(path.DIST + '/assets/fonts'));
