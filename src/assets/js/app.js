@@ -20,6 +20,13 @@
 	  $('body').toggleClass('menu-open');
     $('.site-nav-switch').toggleClass('active');
   };
+  
+  var pixivArchiveStat = function() {
+    var vol = $(".single .post .content ul").length;
+    var artistCount = $(".single .post .content ul li").length;
+    $("#pixiv-vol").text(vol);
+    $("#pixiv-artist-count").text(artistCount);
+  };
 	
 	$(function() {
 		$('#footer, #main').addClass('loaded');
@@ -33,6 +40,10 @@
 		setTimeout(function() {
 	    $('#loading-bar-wrapper').fadeOut(500);
 	  }, 300);
+	  
+	  if ($('body').hasClass('tag-pixiv') && $("body").hasClass('page')) {
+  	  pixivArchiveStat();
+	  }
 	});
 		
 })(jQuery);
