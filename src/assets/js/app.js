@@ -22,8 +22,8 @@
   };
   
   var pixivArchiveStat = function() {
-    var vol = $(".single .post .content ul").length;
-    var artistCount = $(".single .post .content ul li").length;
+    var vol = $(".single .content ul").length;
+    var artistCount = $(".single .content ul li").length;
     $("#pixiv-vol").text(vol);
     $("#pixiv-artist-count").text(artistCount);
   };
