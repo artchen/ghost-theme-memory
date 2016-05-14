@@ -1,6 +1,10 @@
 # Ghost Theme Typescript
 
-Typescript is a minimal theme for [Ghost](http://ghost.org). I am working on a [Hexo](https://hexo.io/) version, too.
+Typescript is a minimal theme for [Ghost](http://ghost.org).
+
+This theme on other platform:
+
+Hexo version: [hexo-theme-typescript](https://github.com/artchen/hexo-theme-typescript)
 
 ## Production
 
