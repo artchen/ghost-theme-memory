@@ -59,6 +59,10 @@ git pull
 
 Please visit my blog (in Chinese) for a demo of tis theme. [http://otakism.org](http://otakism.org).
 
+Here is a screenshot for quick preview:
+
+![Typescript Demo](http://artifact.me/images/ghost-theme-typescript-screenshot.png)
+
 ## Copyright
 
 Public resources used in this theme:
