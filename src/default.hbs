@@ -32,13 +32,23 @@
   <meta name="msapplication-square150x150logo" content="{{asset "/favicon/mstile-150x150.png"}}" />
   <meta name="msapplication-wide310x150logo" content="{{asset "/favicon/mstile-310x150.png"}}" />
   <meta name="msapplication-square310x310logo" content="{{asset "/favicon/mstile-310x310.png"}}" />
-
+  <!-- / Favicon -->
 
   <!-- Typekit Fonts -->
   <script src="https://use.typekit.net/ulr4loe.js"></script>
 	<script>try{Typekit.load({ async: false });}catch(e){}</script>
+	<!-- / Typekit Fonts -->
 	
+  <!-- Theme Style -->
   <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
+  <!-- / Theme Style -->
+  
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+  
   {{ghost_head}}
 </head>
 <body class="{{body_class}}">
@@ -47,28 +57,31 @@
 	  <div id="loading-bar"></div>
 	</div>
 	
-	<script>document.getElementById("loading-bar").style.width="20%";</script>
+	<script>setLoadingBarProgress(20);</script>
 	<div class="site-wrapper">
   {{> header}}
   
-  <script>document.getElementById("loading-bar").style.width="40%";</script>
+  <script>setLoadingBarProgress(40);</script>
   
   {{{body}}}
-  <script>document.getElementById("loading-bar").style.width="60%";</script>
+  <script>setLoadingBarProgress(60);</script>
   
   {{> footer}}
   
 	</div>
 	
-	<script>document.getElementById("loading-bar").style.width="80%";</script>
+	<script>setLoadingBarProgress(80);</script>
   
+  <!-- Javascript -->
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 	<script>window.jQuery || document.write('<script src="/js/vendor.js"><\/script>')</script>
-
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
   <script type="text/javascript" src="{{asset "js/app.js"}}"></script>
   <script>hljs.initHighlightingOnLoad();</script>
-    <script>document.getElementById("loading-bar").style.width="100%";</script>
+  <!-- / Javascript -->
+  
+  <script>setLoadingBarProgress(100);</script>
+  
 	{{ghost_foot}}
 </body>
 </html>
