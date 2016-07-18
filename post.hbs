@@ -6,12 +6,12 @@
   <article class="post single {{post_class}}">
 		<h2 class="title"><a href="{{url}}">{{{title}}}</a></h2>
 		<time>{{date published_at format="MMMM DD, YYYY"}}</time>
-		<section class="content">
+		<section class="content single-content">
       {{content}}
-      <div class="tags">
-			  {{tags separator=""}}
-		  </div>
 		</section>
+		<div class="tags">
+		  {{tags separator=""}}
+	  </div>
   </article>
   
   <section class="post-nav clearfix">

@@ -3,12 +3,20 @@
 	<article class="post {{post_class}}">
 	  <h2 class="title"><a href="{{url}}">{{{title}}}</a></h2>
 	  <time>{{date published_at format="MMMM DD, YYYY"}}</time>
+	  <div class="content-loading">
+  	  <div class="sk-folding-cube">
+        <div class="sk-cube1 sk-cube"></div>
+        <div class="sk-cube2 sk-cube"></div>
+        <div class="sk-cube4 sk-cube"></div>
+        <div class="sk-cube3 sk-cube"></div>
+      </div>
+	  </div>
 	  <section class="content">
 		  {{content}}
-		  <div class="tags">
-			  {{tags separator=""}}
-		  </div>
 	  </section>
+	  <div class="tags">
+		  {{tags separator=""}}
+	  </div>
 	</article>
 	{{/foreach}}
 </section>

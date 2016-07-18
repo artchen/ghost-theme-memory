@@ -27,6 +27,24 @@
     $("#pixiv-vol").text(vol);
     $("#pixiv-artist-count").text(artistCount);
   };
+  
+  var generateExcerpt = function() {
+    var re = /<!-- *more *-->(.|\n)*/i;
+    $('.post-list .post').each(function() {
+      var post = $(this);
+      var permalink = post.find('h2.title > a').attr('href');
+      var contentTag = post.find('section.content');
+      var contentLoadingTag = post.find('.content-loading');
+      var content = contentTag.html();
+      var excerpt = content.replace(re,"");
+      if (content.length !== excerpt.length) {
+        excerpt += "<a href='" +permalink+ "' class='readmore'>Read More...</a>";
+      }
+      contentTag.html(excerpt);
+      contentTag.addClass('excerpt-ready');
+      contentLoadingTag.addClass('excerpt-ready');
+    });
+  };
 	
 	$(function() {
 		$('#footer, #main').addClass('loaded');
@@ -44,6 +62,8 @@
 	  if ($('body').hasClass('tag-pixiv') && $("body").hasClass('page')) {
   	  pixivArchiveStat();
 	  }
+	  
+	  generateExcerpt();
 	});
 		
 })(jQuery);

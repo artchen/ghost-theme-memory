@@ -1,9 +1,24 @@
+.content-loading {
+  display: block;
+  
+  &.excerpt-ready {
+    display: none;
+  }
+}
 .content {
+  display: none;
 	color: lighten(@black, 2%);
   font-size: 14px;
   line-height: 1.75em;
   padding: 0px 30px;
+  transition: all ease 0.24s;
   
+  &.excerpt-ready {
+    display: block;
+  }
+  &.single-content {
+    display: block;
+  }
   @media (max-width: @on-phone) {
     padding: 0px 20px;
   }
@@ -116,32 +131,7 @@
     font-size: 1em;
     background: lighten(@background-color,5%);
   }
-  .tags {
-	  margin-top: 50px;
-	  
-		a {
-			position: relative;
-			padding: 4px 10px 4px 20px;
-			margin-right: 5px;
-			font-size: 14px;
-			background: @background-color;
-			border-radius: 2px;
-			vertical-align: middle;
-			line-height: 1.75em;
-			color: @black;
-			
-			&:hover {
-				background: @black;
-				color: white;
-			}
-			&::before {
-				position: absolute;
-				top: 0;
-				left: 7px;
-				content: "#";
-			}
-		}
-	}
+  
   @media (max-width: @on-phone)  {
 
     h1, h2, h3 {
