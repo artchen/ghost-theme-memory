@@ -25,7 +25,7 @@ Since Typescript was a private theme used on [otakism.org](http://otakism.org), 
 * Fonts: the default English fonts are from [Typekit](https://typekit.com/). If you are using Typekit like me, please replace the embedded Javascript code in `default.hbs`, else you can delete the code.
 * Disqus integration: I no longer hardcode the integration code into `post.hbs` and `page.hbs`, please copy and paste the following code into Ghost code injection.
 
-```
+```javascript
 <script>  
   (function() {
     var disqus_username = 'YOUR_DISQUS_USERNAME'; // Don't forget to replace
