@@ -179,6 +179,7 @@ var GoogleCustomSearch = function(options) {
     self.searchInput.each(function(index,elem) {
       $(elem).val(queryText);
     });
+    document.activeElement.blur();
     // Ajax GET
     self.query(queryText, 1);
   };
