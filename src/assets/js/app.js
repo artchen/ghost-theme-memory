@@ -1,6 +1,16 @@
 (function($) {
 	
 	"use strict";
+	
+	// options
+	var GOOGLE_CUSTOM_SEARCH_ENABLE = true;
+	var EXCERPT_GENERATOR_ENABLE = true;
+	var GOOGLE_CUSTOM_SEARCH_API_KEY = "AIzaSyDGd5JJH7rR3sgS-JPYblwJ72GOsqzighc";
+	var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "017821029378163458527:msqkochcsj0";
+
+
+	var customSearch = {};
+	var excerptGenerator = {};
   
   var scrolltoElement = function(e) {
     e.preventDefault();
@@ -28,29 +38,33 @@
     $("#pixiv-artist-count").text(artistCount);
   };
   
-  var generateExcerpt = function() {
-    var re = /<!-- *more *-->(.|\n)*/i;
-    $('.post-list .post').each(function() {
-      var post = $(this);
-      var permalink = post.find('h2.title > a').attr('href');
-      var contentTag = post.find('section.content');
-      var contentLoadingTag = post.find('.content-loading');
-      var content = contentTag.html();
-      var excerpt = content.replace(re,"");
-      if (content.length !== excerpt.length) {
-        excerpt += "<a href='" +permalink+ "' class='readmore'>Read More...</a>";
-      }
-      contentTag.html(excerpt);
-      contentTag.addClass('excerpt-ready');
-      contentLoadingTag.addClass('excerpt-ready');
-    });
+  var ExcerptGenerator = function(selector) {
+    var self = this;
+    self.init = function() {
+      $(selector).each(function() {
+        var post = $(this);
+        var permalink = post.find('h2.title > a').attr('href');
+        var contentTag = post.find('section.content');
+        var contentLoadingTag = post.find('.content-loading');
+        var content = contentTag.html();
+        var re = /<!-- *more *-->(.|\n)*/i;
+        var excerpt = content.replace(re,"");
+        if (content.length !== excerpt.length) {
+          excerpt += "<a href='" +permalink+ "' class='readmore'>Read More...</a>";
+        }
+        contentTag.html(excerpt);
+        contentTag.addClass('excerpt-ready');
+        contentLoadingTag.addClass('excerpt-ready');
+      });
+    };
+    self.init();
   };
 	
 	$(function() {
 		$('#footer, #main').addClass('loaded');
 		$('.site-nav-switch').on('click', toggleMenu);
 		$(document).on('click', closeMenu);
-		$('.site-menu').on('click', function (e) {
+		$('.site-menu').on('click', function(e) {
 			e.stopPropagation();
 		});
 		$('.window-nav, .go-comment').on('click', scrolltoElement);
@@ -62,8 +76,15 @@
 	  if ($('body').hasClass('tag-pixiv') && $("body").hasClass('page')) {
   	  pixivArchiveStat();
 	  }
-	  
-	  generateExcerpt();
+	  if (EXCERPT_GENERATOR_ENABLE) {
+      excerptGenerator = new ExcerptGenerator('.post-list .post');
+    }
+	  if (GOOGLE_CUSTOM_SEARCH_ENABLE) {
+  	  customSearch = new GoogleCustomSearch({
+    	  apiKey: GOOGLE_CUSTOM_SEARCH_API_KEY,
+    	  engineId: GOOGLE_CUSTOM_SEARCH_ENGINE_ID
+  	  });
+	  }
 	});
 		
 })(jQuery);

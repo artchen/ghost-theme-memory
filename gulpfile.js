@@ -20,7 +20,8 @@ var path = {
   	'src/partials/*.hbs'
   ],
   JS: [
-  	'src/assets/js/*.js'
+    'src/assets/js/google-custom-search.js',
+  	'src/assets/js/app.js'
   ],
   LESS: [
   	'src/assets/less/style.less'

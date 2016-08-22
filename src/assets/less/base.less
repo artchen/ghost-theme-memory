@@ -28,6 +28,10 @@ body {
   color: @text-color;
   text-rendering: geometricPrecision;
   background-color: @background-color;
+  
+  &.modal-active {
+    overflow: hidden;
+  }
 }
 
 ::-moz-selection {
