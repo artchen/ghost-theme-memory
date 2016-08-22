@@ -17,12 +17,13 @@ git clone https://github.com/artchen/ghost-theme-typescript.git typescript
 
 Since Typescript was a private theme used on [otakism.org](http://otakism.org), my blog, there are quite a lot of things hard-coded into the template that you'll need to change. Here is a checklist for (most of) them:
 
-* Replace the site logo: `assets/img/logo.png`
-* Change the short text under the logo: `partials/header.hbs`
-* Change Disqus username: `page.hbs`, `post.hbs`
-* Change social network links: `partials/footer.hbs`
-* Change search integration: the search feature is powered by [swiftype](https://swiftype.com/). Please follow their instruction to setup for your site.
-* Change fonts: the default English fonts are from [Typekit](https://typekit.com/). If you are using Typekit like me, please replace the embedded Javascript code in `default.hbs`, else you can delete the code.
+* Site logo: `assets/img/logo.png`
+* Short text under the logo: `partials/header.hbs`
+* Disqus integration: `page.hbs`, `post.hbs`
+* Social network: `partials/footer.hbs`
+* Search integration: the theme supports [Google Custom Search Engine](https://cse.google.com), please replace the api key and engine id in `assets/js/app.js` with yours. If you don't intend to use CSE, please set the corresponding option to false.
+* Excerpt generation: the theme generates supports `<!--more-->` excerpt with front-end regex. If you don't like this feature, please set the corresponding option to false in `assets/js/app.js`.
+* Fonts: the default English fonts are from [Typekit](https://typekit.com/). If you are using Typekit like me, please replace the embedded Javascript code in `default.hbs`, else you can delete the code.
 
 ## Development
 
