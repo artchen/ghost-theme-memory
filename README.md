@@ -19,11 +19,25 @@ Since Typescript was a private theme used on [otakism.org](http://otakism.org), 
 
 * Site logo: `assets/img/logo.png`
 * Short text under the logo: `partials/header.hbs`
-* Disqus integration: `page.hbs`, `post.hbs`
 * Social network: `partials/footer.hbs`
 * Search integration: the theme supports [Google Custom Search Engine](https://cse.google.com), please replace the api key and engine id in `assets/js/app.js` with yours. If you don't intend to use CSE, please set the corresponding option to false.
 * Excerpt generation: the theme generates supports `<!--more-->` excerpt with front-end regex. If you don't like this feature, please set the corresponding option to false in `assets/js/app.js`.
 * Fonts: the default English fonts are from [Typekit](https://typekit.com/). If you are using Typekit like me, please replace the embedded Javascript code in `default.hbs`, else you can delete the code.
+* Disqus integration: I no longer hardcode the integration code into `post.hbs` and `page.hbs`, please copy and paste the following code into Ghost code injection.
+
+```
+<script>  
+  (function() {
+    var disqus_username = 'YOUR_DISQUS_USERNAME'; // Don't forget to replace
+    var d = document, s = d.createElement('script');
+    s.src = '//' + disqus_username + '.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    if ($('body').hasClass('post-template')) {
+      (d.head || d.body).appendChild(s);
+    }
+  })();
+</script>  
+```
 
 ## Development
 
