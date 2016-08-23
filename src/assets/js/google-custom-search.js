@@ -7,6 +7,7 @@ var GoogleCustomSearch = function(options) {
     form: ".searchform",
     input: ".searchform .search_input",
     modal: "#modal-search",
+    modalBody: "#modal-search .modal-body",
     overlay: "#modal-search .overlay",
     resultContainer: "#modal-search .results",
     closeButton: "#modal-search .close",
@@ -23,6 +24,7 @@ var GoogleCustomSearch = function(options) {
   self.searchForm = $(config.form);
   self.searchInput = $(config.input);
   self.modal = $(config.modal);
+  self.modalBody = $(config.modalBody);
   self.overlay = $(config.overlay);
   self.resultContainer = $(config.resultContainer);
   self.closeButton = $(config.closeButton);
@@ -143,8 +145,6 @@ var GoogleCustomSearch = function(options) {
       start: startIndex,
       num: PER_PAGE
     }, function(data, status) {
-      console.log(status);
-      console.log(data);
       if (status === 'success' && data.items && data.items.length > 0) {
         var results = self.buildResults(data.items); 
         self.resultContainer.html(results);       
@@ -159,6 +159,7 @@ var GoogleCustomSearch = function(options) {
         self.errorContainer.show();
       }
       self.buildMetadata(data);
+      self.modalBody.scrollTop(0);
       self.ajaxContent.addClass('loaded');
       if (callback) {
         callback(data);
@@ -173,7 +174,7 @@ var GoogleCustomSearch = function(options) {
   self.search = function(queryText) {
     // UI update
     if (!self.open) {
-      self.modal.addClass('active');
+      self.modal.fadeIn();
       $('body').addClass('modal-active');
     }
     self.searchInput.each(function(index,elem) {
@@ -190,7 +191,7 @@ var GoogleCustomSearch = function(options) {
    */
   self.close = function() {
     self.open = false;
-    self.modal.removeClass('active');
+    self.modal.fadeOut();
     $('body').removeClass('modal-active');
   };
   
