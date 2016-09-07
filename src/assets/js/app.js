@@ -1,15 +1,23 @@
+var customSearch;
+
 (function($) {
 	
 	"use strict";
 	
 	// options
-	var GOOGLE_CUSTOM_SEARCH_ENABLE = true;
+	var SEARCH_SERVICE = 'google';
 	var EXCERPT_GENERATOR_ENABLE = true;
-	var GOOGLE_CUSTOM_SEARCH_API_KEY = "AIzaSyDGd5JJH7rR3sgS-JPYblwJ72GOsqzighc";
-	var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "017821029378163458527:msqkochcsj0";
+  
+	var GOOGLE_CUSTOM_SEARCH_API_KEY = 'AIzaSyDGd5JJH7rR3sgS-JPYblwJ72GOsqzighc';
+	var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = '017821029378163458527:msqkochcsj0';
+  var ALGOLIA_API_KEY = '';
+  var ALGOLIA_APP_ID = '';
+  var ALGOLIA_INDEX_NAME = '';
+  var AZURE_SERVICE_NAME = '';
+  var AZURE_INDEX_NAME = '';
+  var AZURE_QUERY_KEY = '';
+  var BAIDU_API_KEY = '';
 
-
-	var customSearch = {};
 	var excerptGenerator = {};
   
   var scrolltoElement = function(e) {
@@ -79,12 +87,34 @@
 	  if (EXCERPT_GENERATOR_ENABLE) {
       excerptGenerator = new ExcerptGenerator('.post-list .post');
     }
-	  if (GOOGLE_CUSTOM_SEARCH_ENABLE) {
+	  if (SEARCH_SERVICE === 'google') {
   	  customSearch = new GoogleCustomSearch({
     	  apiKey: GOOGLE_CUSTOM_SEARCH_API_KEY,
     	  engineId: GOOGLE_CUSTOM_SEARCH_ENGINE_ID
   	  });
 	  }
+    else if (SEARCH_SERVICE === 'algolia') {
+      customSearch = new AlgoliaSearch({
+        apiKey: ALGOLIA_API_KEY,
+        appId: ALGOLIA_APP_ID,
+        indexName: ALGOLIA_INDEX_NAME
+      });
+    }
+    else if (SEARCH_SERVICE === 'hexo') {
+      customSearch = new HexoSearch();
+    }
+    else if (SEARCH_SERVICE === 'azure') {
+      customSearch = new AzureSearch({
+        serviceName: AZURE_SERVICE_NAME,
+        indexName: AZURE_INDEX_NAME,
+        queryKey: AZURE_QUERY_KEY
+      });
+    }
+    else if (SEARCH_SERVICE === 'baidu') {
+      customSearch = new BaiduSearch({
+        apiId: BAIDU_API_KEY
+      });
+    }
 	});
 		
 })(jQuery);
