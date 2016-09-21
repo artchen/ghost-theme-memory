@@ -20,7 +20,7 @@ Since Typescript was a private theme used on [otakism.org](http://otakism.org), 
 * Site logo: `assets/img/logo.png`
 * Short text under the logo: `partials/header.hbs`
 * Social network: `partials/footer.hbs`
-* Search integration: the theme supports [Google Custom Search Engine](https://cse.google.com), please replace the api key and engine id in `assets/js/app.js` with yours. If you don't intend to use CSE, please set the corresponding option to false.
+* Search integration: support [Google Custom Search Engine](https://cse.google.com), please replace the api key and engine id in `assets/js/app.js` with yours. If you don't intend to use CSE, please set the corresponding option to false.
 * Excerpt generation: the theme generates supports `<!--more-->` excerpt with front-end regex. If you don't like this feature, please set the corresponding option to false in `assets/js/app.js`.
 * Fonts: the default English fonts are from [Typekit](https://typekit.com/). If you are using Typekit like me, please replace the embedded Javascript code in `default.hbs`, else you can delete the code.
 * Disqus integration: I no longer hardcode the integration code into `post.hbs` and `page.hbs`, please copy and paste the following code into Ghost code injection.
@@ -50,14 +50,13 @@ cd <path-to-ghost-folder>/content/themes/
 git clone https://github.com/artchen/ghost-theme-typescript.git typescript
 ```
 
-Install [gulp](http://gulpjs.com/), [bower](http://bower.io/) and [npm](https://www.npmjs.com/) before proceed.
+Install [gulp](http://gulpjs.com/) and [npm](https://www.npmjs.com/) before proceed.
 
 Install and build the app:
 
 ```
 cd ./typescript
 npm install
-bower install
 gulp
 ```
 
@@ -72,7 +71,7 @@ git pull
 
 ## Demo
 
-Please visit my blog (in Chinese) for a demo of tis theme. [http://otakism.org](http://otakism.org).
+Please visit my blog (in Chinese) for a demo of this theme. [http://otakism.org](http://otakism.org).
 
 Here is a screenshot for quick preview:
 
