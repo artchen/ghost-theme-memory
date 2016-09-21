@@ -28,6 +28,7 @@
     "gulp-sourcemaps": "^2.0.0-alpha",
     "gulp-uglify": "^1.5.3",
     "gulp-watch": "^4.3.5",
+    "jquery": "^3.1.0",
     "jshint": "^2.9.2"
   }
 }

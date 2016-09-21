@@ -37,7 +37,7 @@ var path = {
   	'src/assets/img/**'
   ],
   VENDOR: [
-    'bower_components/jquery/dist/jquery.js'
+    'node_modules/jquery/dist/jquery.js'
   ],
   DIST: './'
 };
