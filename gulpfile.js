@@ -2,15 +2,11 @@
 var gulp = require('gulp');
 var less = require('gulp-less');
 var watch = require('gulp-watch');
-var gulpFilter = require('gulp-filter');
 var imagemin = require('gulp-imagemin');
 var concat = require('gulp-concat');
 var sourcemaps = require('gulp-sourcemaps');
 var uglify = require('gulp-uglify');
 var cleanCSS = require('gulp-clean-css');
-var lessDependents = require('gulp-less-dependents');
-var bower = require('gulp-bower');
-var concat_vendor = require('gulp-concat-vendor');
 var jshint = require('gulp-jshint');
 
 /* path def */
@@ -54,7 +50,6 @@ gulp.task('lint', function() {
 /* compile less */
 gulp.task('less', function () {
   gulp.src(path.LESS)
-  	.pipe(lessDependents())
     .pipe(less())
     .pipe(cleanCSS())
     .pipe(gulp.dest(path.DIST + '/assets/css'));
