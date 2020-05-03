@@ -75,7 +75,7 @@ Please visit my blog (in Chinese) for a demo of this theme. [https://otakism.com
 
 Here is a screenshot for quick preview:
 
-![Memory Demo](http://artifact.me/images/ghost-theme-typescript-screenshot.png)
+![Memory Demo](https://cdn.otakism.com/assets/hexo-theme-memory/demo/ghost-theme-memory-screenshot.jpg)
 
 ## Copyright
 
