@@ -47,7 +47,7 @@ Clone the repository.
 
 ```
 cd <path-to-ghost-folder>/content/themes/
-git clone https://github.com/artchen/ghost-theme-typescript.git typescript
+git clone https://github.com/artchen/ghost-theme-memory.git memory
 ```
 
 Install [gulp](http://gulpjs.com/) and [npm](https://www.npmjs.com/) before proceed.
@@ -55,7 +55,7 @@ Install [gulp](http://gulpjs.com/) and [npm](https://www.npmjs.com/) before proc
 Install and build the app:
 
 ```
-cd ./typescript
+cd ./memory
 npm install
 gulp
 ```
@@ -65,7 +65,7 @@ At this point the development environment should be good to go.
 ## Update
 
 ```
-cd <path-to-ghost>/content/themes/typescript/
+cd <path-to-ghost>/content/themes/memory/
 git pull
 ```
 
