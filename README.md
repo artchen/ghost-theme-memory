@@ -1,21 +1,23 @@
-# Ghost Theme Typescript
+# Ghost Theme Memory
 
-Typescript is a minimal theme for [Ghost](http://ghost.org).
+Update: this theme is no longer maintained.
+
+Memory is a minimal theme for [Ghost](https://ghost.org).
 
 This theme is also available on:
 
-Hexo version: [hexo-theme-typescript](https://github.com/artchen/hexo-theme-typescript)
+Hexo version: [hexo-theme-memory](https://github.com/artchen/hexo-theme-memory)
 
 ## Production
 
-If you are going to use Typescript directly (without customization).
+If you are going to use Memory directly (without customization).
 
 ```
 cd <path-to-ghost-folder>/content/themes/
-git clone https://github.com/artchen/ghost-theme-typescript.git typescript
+git clone https://github.com/artchen/ghost-theme-memory.git memory
 ```
 
-Since Typescript was a private theme used on [otakism.org](http://otakism.org), my blog, there are quite a lot of things hard-coded into the template that you'll need to change. Here is a checklist for (most of) them:
+Since Memory was a private theme used on [otakism.org](http://otakism.org), my blog, there are quite a lot of things hard-coded into the template that you'll need to change. Here is a checklist for (most of) them:
 
 * Site logo: `assets/img/logo.png`
 * Short text under the logo: `partials/header.hbs`
@@ -40,8 +42,6 @@ Since Typescript was a private theme used on [otakism.org](http://otakism.org), 
 ```
 
 ## Development
-
-If you are going to develop your own features, styles, etc based on Typescript, here is how to set up the development environment.
 
 Clone the repository.
 
@@ -71,11 +71,11 @@ git pull
 
 ## Demo
 
-Please visit my blog (in Chinese) for a demo of this theme. [http://otakism.org](http://otakism.org).
+Please visit my blog (in Chinese) for a demo of this theme. [https://otakism.com](https://otakism.com).
 
 Here is a screenshot for quick preview:
 
-![Typescript Demo](http://artifact.me/images/ghost-theme-typescript-screenshot.png)
+![Memory Demo](http://artifact.me/images/ghost-theme-typescript-screenshot.png)
 
 ## Copyright
 
@@ -86,7 +86,7 @@ Public resources used in this theme:
 
 Copyright © Art Chen
 
-Please do not remove the "Theme Typescript designed by Art Chen" text and links.
+Please do not remove the "Theme Memory designed by Art Chen" text and links.
 
 请不要删除页面底部的作者信息和链接。
 
